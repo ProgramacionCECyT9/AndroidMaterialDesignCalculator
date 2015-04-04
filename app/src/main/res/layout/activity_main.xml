@@ -277,6 +277,16 @@
                 android:id="@+id/button_root"
                 android:layout_weight="1"
                 android:onClick="operatorPressed"/>
+            <Button
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:textColor="@color/text"
+                android:textSize="@dimen/text"
+                android:text="| |"
+                android:id="@+id/button_abs"
+                android:layout_weight="1"
+                android:onClick="operatorPressed"/>
 
         </LinearLayout>
     </LinearLayout>

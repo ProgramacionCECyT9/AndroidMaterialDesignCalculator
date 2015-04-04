@@ -3,7 +3,7 @@ package com.example.rafael_miranda_villegas_5im8.material_calculator;
 * Rafael Miranda Villegas 6IM8 2013090424.
 * Laboratorio de Proyectos de Tecnologías de la Informmación IV
 * Simple material design calculator, this provides operators like add, subtract,
-* multiply, divide, square root and power.
+* multiply, divide, absolute number, square root and power.
 *
 * Homework for april 3
 *
@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
             button_seven, button_eight, button_nine,
             button_zero, button_plus, button_minus,
             button_multiply, button_divide, button_power,
-            button_root, button_clear, button_equals;
+            button_root, button_abs, button_clear, button_equals;
 
     ArrayList<Double> math = new ArrayList<>();
     double first_number;
@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
     final static int DIVISION = 4;
     final static int POWER = 5;
     final static int ROOT = 6;
+    final static int ABS = 7;
     final static int EQUALS = 0;
     final static int CLEAR = 1;
     final static int DONT_CLEAR = 0;
@@ -70,6 +71,7 @@ public class MainActivity extends Activity {
         button_divide   = (Button) findViewById(R.id.button_divide);
         button_power    = (Button) findViewById(R.id.button_power);
         button_root     = (Button) findViewById(R.id.button_root);
+        button_abs      = (Button) findViewById(R.id.button_abs);
         button_clear    = (Button) findViewById(R.id.button_clear);
         button_equals   = (Button) findViewById(R.id.button_equals);
 
@@ -217,6 +219,12 @@ public class MainActivity extends Activity {
                 calcLogic(ROOT);
             }
         });
+        button_abs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcLogic(ABS);
+            }
+        });
         button_equals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -285,6 +293,14 @@ public class MainActivity extends Activity {
                 second_number = math.get(1);
                 math.removeAll(math);
                 math.add(Math.sqrt(first_number));
+                calculator_result.setText(String.format("%.1f", math.get(0)));
+                break;
+            //For the absolute number only put the number that you want obtain his absolute and press equal
+            case ABS:
+                first_number = math.get(0);
+                second_number = math.get(1);
+                math.removeAll(math);
+                math.add(Math.abs(first_number));
                 calculator_result.setText(String.format("%.1f", math.get(0)));
                 break;
         }

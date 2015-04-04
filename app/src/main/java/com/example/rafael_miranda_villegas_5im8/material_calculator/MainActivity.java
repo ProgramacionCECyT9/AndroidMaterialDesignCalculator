@@ -1,7 +1,7 @@
 package com.example.rafael_miranda_villegas_5im8.material_calculator;
 /*
-* Rafael Miranda Villegas 5IM8 2013090424.
-* Laboratorio de Proyectos de Tecnologías de la Informmación
+* Rafael Miranda Villegas 6IM8 2013090424.
+* Laboratorio de Proyectos de Tecnologías de la Informmación IV
 * Simple material design calculator, this provides operators like add, subtract,
 * multiply, divide, square root and power.
 *

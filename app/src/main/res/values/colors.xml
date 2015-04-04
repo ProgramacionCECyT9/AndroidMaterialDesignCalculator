@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text">#fff</color>
+    <color name="background">#4C4C4C</color>
+    <color name="textview">#EEE</color>
+    <color name="operators">#263238</color>
+</resources>
